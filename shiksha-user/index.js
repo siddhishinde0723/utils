@@ -29,7 +29,7 @@ router.get('/', (req, res) => {
 })
 
 module.exports = {
-	dependencies: getDependencies(),
+	// dependencies: getDependencies(),
 	routes,
 	createPackage,
 	packageMeta: getPackageMeta(),
