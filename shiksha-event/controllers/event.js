@@ -2,7 +2,7 @@ const routeConfigs = require("../constants/routes");
 const requesters = require("../utils/requester");
 // const {convertIdsToString} = require('../utils/integerToStringConverter')
 
-const createNotification = async (req) => {
+const createEvent = async (req) => {
   const selectedConfig = routeConfigs.routes.find(
     (obj) => obj.sourceRoute === req.sourceRoute
   );
@@ -14,8 +14,8 @@ const createNotification = async (req) => {
   );
 };
 
-const notificationController = {
-  createNotification,
+const eventController = {
+  createEvent,
 };
 
-module.exports = notificationController;
+module.exports = eventController;
