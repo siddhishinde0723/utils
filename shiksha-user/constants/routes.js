@@ -107,7 +107,7 @@ module.exports = {
       targetRoute: {
         path: "/user/v1/cohort/cohortHierarchy/:id",
         type: "GET",
-        functionName: "getCohortDetails",
+        functionName: "getCohortHierarchy",
       },
     },
     {
@@ -118,7 +118,7 @@ module.exports = {
       targetRoute: {
         path: "/user/v1/cohortmember/list",
         type: "POST",
-        functionName: "getCohortMember",
+        functionName: "getCohortMembers",
       },
     },
     {
@@ -140,7 +140,7 @@ module.exports = {
       targetRoute: {
         path: "/user/v1/cohortmember/read/:id",
         type: "GET",
-        functionName: "getCohortDetails",
+        functionName: "getCohortmember",
       },
     },
     {
@@ -151,7 +151,7 @@ module.exports = {
       targetRoute: {
         path: "/user/v1/cohortmember/update/:id",
         type: "PUT",
-        functionName: "getCohortDetails",
+        functionName: "updateCohortmember",
       },
     },
     {
@@ -162,7 +162,7 @@ module.exports = {
       targetRoute: {
         path: "/user/v1/read/:id",
         type: "GET",
-        functionName: "getCohortDetails",
+        functionName: "getUser",
       },
     },
     {
@@ -173,7 +173,7 @@ module.exports = {
       targetRoute: {
         path: "/user/v1/update/:id",
         type: "PATCH",
-        functionName: "getCohortDetails",
+        functionName: "updateUser",
       },
     },
     {
@@ -184,7 +184,7 @@ module.exports = {
       targetRoute: {
         path: "/user/v1/list",
         type: "POST",
-        functionName: "getCohortDetails",
+        functionName: "getUsers",
       },
     },
     {
@@ -350,6 +350,28 @@ module.exports = {
         path: "/user/v1/fields/values/delete/:id",
         type: "DELETE",
         functionName: "fieldValueDelete",
+      },
+    },
+    {
+      sourceRoute: "/interface/v1/tenant/delete",
+      type: "DELETE",
+      inSequence: true,
+      orchestrated: true,
+      targetRoute: {
+        path: "/user/v1/tenant/delete",
+        type: "DELETE",
+        functionName: "deleteTenant",
+      },
+    },
+    {
+      sourceRoute: "/interface/v1/tenant/search",
+      type: "POST",
+      inSequence: true,
+      orchestrated: true,
+      targetRoute: {
+        path: "/user/v1/tenant/search",
+        type: "POST",
+        functionName: "searchTenant",
       },
     },
   ],
