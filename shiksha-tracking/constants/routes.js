@@ -167,5 +167,71 @@ module.exports = {
         functionName: "getTrackingCourseInProgressList",
       },
     },
+    {
+      sourceRoute: "/interface/v1/tracking/user_certificate/status/create",
+      type: "POST",
+      inSequence: true,
+      orchestrated: true,
+      targetRoute: {
+        path: "/tracking-service/v1/tracking/user_certificate/status/create",
+        type: "POST",
+        functionName: "enrollUserToCourse",
+      },
+    },
+    {
+      sourceRoute: "/interface/v1/tracking/user_certificate/status/update",
+      type: "POST",
+      inSequence: true,
+      orchestrated: true,
+      targetRoute: {
+        path: "/tracking-service/v1/tracking/user_certificate/status/update",
+        type: "POST",
+        functionName: "updateStatusOfUserForCourse",
+      },
+    },
+    {
+      sourceRoute: "/interface/v1/tracking/user_certificate/status/get",
+      type: "POST",
+      inSequence: true,
+      orchestrated: true,
+      targetRoute: {
+        path: "/tracking-service/v1/tracking/user_certificate/status/get",
+        type: "POST",
+        functionName: "getStatusOfUserForCourse",
+      },
+    },
+    {
+      sourceRoute: "/interface/v1/tracking/user_certificate/status/search",
+      type: "POST",
+      inSequence: true,
+      orchestrated: true,
+      targetRoute: {
+        path: "/tracking-service/v1/tracking/user_certificate/status/search",
+        type: "POST",
+        functionName: "listUsersCoursesStatus",
+      },
+    },
+    {
+      sourceRoute: "/interface/v1/tracking/certificate/issue",
+      type: "POST",
+      inSequence: true,
+      orchestrated: true,
+      targetRoute: {
+        path: "/tracking-service/v1/tracking/certificate/issue",
+        type: "POST",
+        functionName: "issueCertificate",
+      },
+    },
+    {
+      sourceRoute: "/interface/v1/tracking/certificate/render",
+      type: "POST",
+      inSequence: true,
+      orchestrated: true,
+      targetRoute: {
+        path: "/tracking-service/v1/tracking/certificate/render",
+        type: "POST",
+        functionName: "renderCertificate",
+      },
+    },
   ],
 };
