@@ -374,5 +374,16 @@ module.exports = {
         functionName: "searchTenant",
       },
     },
+    {
+      sourceRoute: "/interface/v1/user/check",
+      type: "POST",
+      inSequence: true,
+      orchestrated: true,
+      targetRoute: {
+        path: "/user/v1/check",
+        type: "POST",
+        functionName: "checkUser",
+      },
+    },
   ],
 };

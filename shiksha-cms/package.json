@@ -1,6 +1,6 @@
 {
   "name": "shiksha-cms",
-  "version": "1.0.4",
+  "version": "1.0.7",
   "description": "Npm package for Shiksha-cms service integration with Interface service. ",
   "main": "index.js",
   "scripts": {

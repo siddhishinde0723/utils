@@ -833,17 +833,6 @@ module.exports = {
       },
     },
     {
-      sourceRoute: "/interface/v1/api/object/category/definition/v1/update",
-      type: "PATCH",
-      inSequence: true,
-      orchestrated: true,
-      targetRoute: {
-        path: "/api/object/category/definition/v1/update",
-        type: "POST",
-        functionName: "updateObjectCategoryDefination",
-      },
-    },
-    {
       sourceRoute:
         "/interface/v1/api/object/category/definition/v1/update/:identifier",
       type: "PATCH",
@@ -851,6 +840,17 @@ module.exports = {
       orchestrated: true,
       targetRoute: {
         path: "/api/object/category/definition/v1/update/:identifier",
+        type: "POST",
+        functionName: "updateObjectCategoryDefination",
+      },
+    },
+    {
+      sourceRoute: "/interface/v1/api/object/category/definition/v1/update",
+      type: "PATCH",
+      inSequence: true,
+      orchestrated: true,
+      targetRoute: {
+        path: "/api/object/category/definition/v1/update",
         type: "POST",
         functionName: "updateObjectCategoryDefination",
       },
