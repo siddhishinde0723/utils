@@ -7,7 +7,7 @@ module.exports = {
       inSequence: true,
       orchestrated: true,
       targetRoute: {
-        path: "/tracking-service/v1/tracking/assessment/read/:assessmentTrackingId",
+        path: "/v1/tracking/assessment/read/:assessmentTrackingId",
         type: "GET",
         functionName: "getTrackingAssessment",
       },
@@ -18,7 +18,7 @@ module.exports = {
       inSequence: true,
       orchestrated: true,
       targetRoute: {
-        path: "/tracking-service/v1/tracking/assessment/create",
+        path: "/v1/tracking/assessment/create",
         type: "POST",
         functionName: "createTrackingAssessment",
       },
@@ -29,7 +29,7 @@ module.exports = {
       inSequence: true,
       orchestrated: true,
       targetRoute: {
-        path: "/tracking-service/v1/tracking/assessment/search",
+        path: "/v1/tracking/assessment/search",
         type: "POST",
         functionName: "searchTrackingAssessment",
       },
@@ -40,7 +40,7 @@ module.exports = {
       inSequence: true,
       orchestrated: true,
       targetRoute: {
-        path: "/tracking-service/v1/tracking/assessment/search/status",
+        path: "/v1/tracking/assessment/search/status",
         type: "POST",
         functionName: "statusOfTrackingAssessment",
       },
@@ -51,7 +51,7 @@ module.exports = {
       inSequence: true,
       orchestrated: true,
       targetRoute: {
-        path: "/tracking-service/v1/tracking/assessment/list",
+        path: "/v1/tracking/assessment/list",
         type: "POST",
         functionName: "getTrackingAssessmentList",
       },
@@ -63,7 +63,7 @@ module.exports = {
       inSequence: true,
       orchestrated: true,
       targetRoute: {
-        path: "/tracking-service/v1/tracking/assessment/delete/:assessmentTrackingId",
+        path: "/v1/tracking/assessment/delete/:assessmentTrackingId",
         type: "DELETE",
         functionName: "deleteTrackingAssessment",
       },
@@ -74,7 +74,7 @@ module.exports = {
       inSequence: true,
       orchestrated: true,
       targetRoute: {
-        path: "/tracking-service/v1/tracking/content/read/:contentTrackingId",
+        path: "/v1/tracking/content/read/:contentTrackingId",
         type: "GET",
         functionName: "getTrackingContent",
       },
@@ -85,7 +85,7 @@ module.exports = {
       inSequence: true,
       orchestrated: true,
       targetRoute: {
-        path: "/tracking-service/v1/tracking/content/create",
+        path: "/v1/tracking/content/create",
         type: "POST",
         functionName: "createTrackingContent",
       },
@@ -96,7 +96,7 @@ module.exports = {
       inSequence: true,
       orchestrated: true,
       targetRoute: {
-        path: "/tracking-service/v1/tracking/content/search",
+        path: "/v1/tracking/content/search",
         type: "POST",
         functionName: "searchTrackingContent",
       },
@@ -107,7 +107,7 @@ module.exports = {
       inSequence: true,
       orchestrated: true,
       targetRoute: {
-        path: "/tracking-service/v1/tracking/content/search/status",
+        path: "/v1/tracking/content/search/status",
         type: "POST",
         functionName: "statusOfTrackingContent",
       },
@@ -118,7 +118,7 @@ module.exports = {
       inSequence: true,
       orchestrated: true,
       targetRoute: {
-        path: "/tracking-service/v1/tracking/content/course/status",
+        path: "/v1/tracking/content/course/status",
         type: "POST",
         functionName: "statusOfTrackingCourse",
       },
@@ -129,7 +129,7 @@ module.exports = {
       inSequence: true,
       orchestrated: true,
       targetRoute: {
-        path: "/tracking-service/v1/tracking/content/unit/status",
+        path: "/v1/tracking/content/unit/status",
         type: "POST",
         functionName: "statusOfTrackingUnit",
       },
@@ -140,7 +140,7 @@ module.exports = {
       inSequence: true,
       orchestrated: true,
       targetRoute: {
-        path: "/tracking-service/v1/tracking/content/list",
+        path: "/v1/tracking/content/list",
         type: "POST",
         functionName: "getTrackingContentList",
       },
@@ -151,7 +151,7 @@ module.exports = {
       inSequence: true,
       orchestrated: true,
       targetRoute: {
-        path: "/tracking-service/v1/tracking/content/delete/:contentTrackingId",
+        path: "/v1/tracking/content/delete/:contentTrackingId",
         type: "DELETE",
         functionName: "deleteTrackingContent",
       },
@@ -162,9 +162,75 @@ module.exports = {
       inSequence: true,
       orchestrated: true,
       targetRoute: {
-        path: "/tracking-service/v1/tracking/content/course/inprogress",
+        path: "/v1/tracking/content/course/inprogress",
         type: "POST",
         functionName: "getTrackingCourseInProgressList",
+      },
+    },
+    {
+      sourceRoute: "/interface/v1/tracking/user_certificate/status/create",
+      type: "POST",
+      inSequence: true,
+      orchestrated: true,
+      targetRoute: {
+        path: "/v1/tracking/user_certificate/status/create",
+        type: "POST",
+        functionName: "enrollUserToCourse",
+      },
+    },
+    {
+      sourceRoute: "/interface/v1/tracking/user_certificate/status/update",
+      type: "POST",
+      inSequence: true,
+      orchestrated: true,
+      targetRoute: {
+        path: "/v1/tracking/user_certificate/status/update",
+        type: "POST",
+        functionName: "updateStatusOfUserForCourse",
+      },
+    },
+    {
+      sourceRoute: "/interface/v1/tracking/user_certificate/status/get",
+      type: "POST",
+      inSequence: true,
+      orchestrated: true,
+      targetRoute: {
+        path: "/v1/tracking/user_certificate/status/get",
+        type: "POST",
+        functionName: "getStatusOfUserForCourse",
+      },
+    },
+    {
+      sourceRoute: "/interface/v1/tracking/user_certificate/status/search",
+      type: "POST",
+      inSequence: true,
+      orchestrated: true,
+      targetRoute: {
+        path: "/v1/tracking/user_certificate/status/search",
+        type: "POST",
+        functionName: "listUsersCoursesStatus",
+      },
+    },
+    {
+      sourceRoute: "/interface/v1/tracking/certificate/issue",
+      type: "POST",
+      inSequence: true,
+      orchestrated: true,
+      targetRoute: {
+        path: "/v1/tracking/certificate/issue",
+        type: "POST",
+        functionName: "issueCertificate",
+      },
+    },
+    {
+      sourceRoute: "/interface/v1/tracking/certificate/render",
+      type: "POST",
+      inSequence: true,
+      orchestrated: true,
+      targetRoute: {
+        path: "/v1/tracking/certificate/render",
+        type: "POST",
+        functionName: "renderCertificate",
       },
     },
   ],
