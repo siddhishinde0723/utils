@@ -1,7 +1,7 @@
 {
-  "name": "shiksha-cms",
-  "version": "1.0.7",
-  "description": "Npm package for Shiksha-cms service integration with Interface service. ",
+  "name": "shiksha-ecml-cms",
+  "version": "1.0.0",
+  "description": "Npm package for Shiksha-ecml-cms service integration with Interface service. ",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/tekdi/utils.git"
   },
-  "author": "Arati Kulkarni",
+  "author": "Siddhi Shinde",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/tekdi/utils/issues"
