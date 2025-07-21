@@ -1,6 +1,6 @@
 {
   "name": "shiksha-ecml-cms",
-  "version": "1.0.0",
+  "version": "1.0.6",
   "description": "Npm package for Shiksha-ecml-cms service integration with Interface service. ",
   "main": "index.js",
   "scripts": {

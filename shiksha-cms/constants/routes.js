@@ -1285,51 +1285,55 @@ module.exports = {
       inSequence: true,
       orchestrated: true,
       targetRoute: {
-        path: "/itemset/v3/create",
+        path: "/learning-service/assessment/itemset/v3/create",
         type: "POST",
         functionName: "bundleContent",
       },
     },
     {
-      sourceRoute: "/learning-service/assessment/v3/items/read/:identifier",
+      sourceRoute:
+        "/interface/v1/learning-service/assessment/v3/items/read/:identifier",
       type: "GET",
       inSequence: true,
       orchestrated: true,
       targetRoute: {
-        path: "/itemset/v3/read/:identifier",
+        path: "/learning-service/assessment/itemset/v3/read/:identifier",
         type: "GET",
         functionName: "bundleContent",
       },
     },
     {
-      sourceRoute: "/learning-service/assessment/v3/items/update/:identifier",
+      sourceRoute:
+        "/interface/v1/learning-service/assessment/v3/items/update/:identifier",
       type: "PATCH",
       inSequence: true,
       orchestrated: true,
       targetRoute: {
-        path: "/itemset/v3/update/:identifier",
+        path: "/learning-service/assessment/itemset/v3/update/:identifier",
         type: "PATCH",
         functionName: "bundleContent",
       },
     },
     {
-      sourceRoute: "/learning-service/assessment/v3/items/review/:identifier",
+      sourceRoute:
+        "/interface/v1/learning-service/assessment/v3/items/review/:identifier",
       type: "POST",
       inSequence: true,
       orchestrated: true,
       targetRoute: {
-        path: "/itemset/v3/review/:identifier",
+        path: "/learning-service/assessment/itemset/v3/review/:identifier",
         type: "POST",
         functionName: "bundleContent",
       },
     },
     {
-      sourceRoute: "/learning-service/assessment/v3/items/retire/:identifier",
+      sourceRoute:
+        "/interface/v1/learning-service/assessment/v3/items/retire/:identifier",
       type: "DELETE",
       inSequence: true,
       orchestrated: true,
       targetRoute: {
-        path: "/itemset/v3/retire/:identifier",
+        path: "/learning-service/assessment/itemset/v3/retire/:identifier",
         type: "DELETE",
         functionName: "bundleContent",
       },

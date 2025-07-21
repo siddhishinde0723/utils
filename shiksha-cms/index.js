@@ -9,10 +9,10 @@ const packageRouter = require("./router");
 
 const getPackageMeta = () => {
   return {
-    basePackageName: "cms",
-    packageName: "shiksha-cms",
+    basePackageName: "ecml-cms",
+    packageName: "shiksha-ecml-cms",
   };
-};
+};``
 
 const createPackage = (options) => {
   return {
